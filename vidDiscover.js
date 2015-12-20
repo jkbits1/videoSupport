@@ -18,14 +18,14 @@
 
     fileData = data.toString().split('\n');
 
-    console.log(fileData);
+    //console.log(fileData);
 
     titleLengths = fileData.reduce(function (prev, val) {
       var re = /(ID_DVD_TITLE_\d+_LENGTH=\d+(\.\d+))/i;
       var found = val.match(re);
 
       if (found !== undefined && found !== null) {
-        console.log(found);
+        //console.log(found);
 
         prev.push(found[0]);
       }
@@ -33,7 +33,7 @@
       return prev;
     }, []);
 
-    console.log(titleLengths);
+    //console.log(titleLengths);
 
     titleDetails = titleLengths.map(function (val) {
       var titleNumber = 0;
@@ -46,15 +46,15 @@
         var regTitleNumber = /\d+/i;
         var numInfo = found[0].match(regTitleNumber);
 
-        console.log(numInfo);
+        //console.log(numInfo);
 
         titleNumber = numInfo[0];
 
         var regLengthPortion = /LENGTH=\d+(\.\d+)/i;
         var lengthInfo = val.match(regLengthPortion);
 
-        console.log(val);
-        console.log("len: " + lengthInfo);
+        //console.log(val);
+        //console.log("len: " + lengthInfo);
 
         length = lengthInfo[0].match(/\d+(\.\d+)/) [0];
       }
@@ -66,7 +66,7 @@
       };
     });
 
-    console.log(titleDetails);
+    //console.log(titleDetails);
 
     titleDetails.sort(function (title1, title2) {
       return title1.length - title2.length;
