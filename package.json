@@ -1,0 +1,19 @@
+{
+  "name": "video-support",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vidDiscover.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jkbits1/videoSupport.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jkbits1/videoSupport/issues"
+  },
+  "homepage": "https://github.com/jkbits1/videoSupport#readme"
+}
