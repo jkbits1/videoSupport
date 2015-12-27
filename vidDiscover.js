@@ -2,12 +2,11 @@
  * Created by jk on 20/12/15.
  */
 
-// iife wrapper
-(function () {
-  var fs = require('fs');
+var fs = require('fs');
 
-  var fileName = process.argv[2];
+module.exports = getVideoInfo;
 
+function getVideoInfo(fileName, callback) {
   fs.readFile(fileName, function (err, data) {
     var fileData = [], titleLengths = [], titleDetails = [];
     if (err) {
@@ -61,5 +60,8 @@
     });
 
     console.log(titleDetails);
+
+    //return titleDetails;
+    callback(titleDetails);
   });
-})();
+};
